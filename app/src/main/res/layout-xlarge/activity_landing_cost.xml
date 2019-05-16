@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/above"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/material_blue_800_new"
+
+        >
+
+        <!-- <ImageView
+             android:id="@+id/img_back"
+             android:layout_width="80dp"
+             android:layout_height="70dp"
+             android:layout_gravity="center"
+             android:src="@drawable/back_icon"
+             />-->
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <com.ebs.ecount.uidesigns.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"
+            app:rippleColor="@color/main_color_grey_200" >
+            <Button
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_blue_800_new"
+                android:inputType="textCapSentences"
+                android:textAllCaps="false"
+                android:text="@string/back"
+                android:textColor="#fff"
+                android:textSize="25sp"
+
+                />
+        </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            android:text="@string/landing_cost"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginRight="70dp"
+            />
+
+    </LinearLayout>
+
+    <!--<ScrollView
+        android:layout_marginBottom="100dp"
+        android:layout_below="@+id/above"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:scrollbarDefaultDelayBeforeFade="3000"
+        android:scrollbarFadeDuration="2000"
+        android:scrollbars="none"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txt_branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="@string/branch"
+                android:textStyle="bold"
+                android:layout_weight="0.6"
+                android:textSize="25dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                >
+
+                <!--<EditText
+                    android:id="@+id/branch_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:theme="@style/MyEditText"
+                    android:textAllCaps="false"
+                    android:hint="Enter the Branch Number"
+                    android:inputType="textNoSuggestions"
+                    android:singleLine="true"
+                    android:layout_marginRight="50dp"
+                    android:textColor="@color/primary_text"
+                    android:textSize="25sp" />-->
+                <AutoCompleteTextView
+                    android:id="@+id/branch_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:completionHintView="@string/loading"
+                    android:drawablePadding="1.5dip"
+                    android:gravity="center_vertical"
+                    android:popupBackground="#000000"
+                    android:layout_marginRight="50dp"
+                    android:theme="@style/MyEditText"
+                    android:imeOptions="actionUnspecified|actionDone"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:hint="Enter the Branch Number"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/primary_text"
+                    android:textSize="25dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/branch_list"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/blue_arrow_down"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginRight="3.5dp"
+                    android:layout_marginBottom="10dp"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listbranch"
+            android:layout_width="405dp"
+            android:layout_height="match_parent"
+            android:divider="@drawable/list_divider"
+            android:scrollbars="none"
+            android:choiceMode="singleChoice"
+            android:listSelector="@color/divider"
+            android:dividerHeight="3dp"
+            android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+            android:visibility="gone"
+            android:background="@color/material_blue_800"
+            android:layout_gravity="right"
+            android:layout_marginRight="60dp"
+
+            >
+
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txt_po"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="@string/po"
+                android:textStyle="bold"
+                android:layout_weight="0.6"
+                android:textSize="25dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+
+                >
+                <!-- <EditText
+                     android:id="@+id/po_no"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:inputType="text"
+                     android:padding="5dp"
+                     android:singleLine="true"
+                     android:hint="Enter the PO Number"
+                     android:textSize="14dp"
+                     android:layout_marginRight="35dp"
+                     style="@style/EditTextCustomHolo"
+                     />-->
+                <EditText
+                    android:id="@+id/po_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:theme="@style/MyEditText"
+                    android:layout_marginRight="50dp"
+                    android:textAllCaps="false"
+                    android:hint="Enter the PO Number"
+                    android:inputType="textNoSuggestions"
+                    android:singleLine="true"
+                    android:textSize="25dp" />
+
+                <ImageView
+                    android:id="@+id/po_search"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end|center"
+                    android:src="@drawable/search"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- <Gallery
+             android:id="@+id/horizontallistview"
+             android:layout_width="match_parent"
+             android:layout_height="30dp"
+             android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+             android:visibility="gone"
+             android:background="@drawable/round_corner_label"
+             android:layout_margin="10dp"
+             />-->
+
+        <LinearLayout
+            android:id="@+id/filterContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:layout_margin="15dp"
+            >
+            <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rippleColor="@color/main_color_grey_200" >
+                <Button
+                    android:id="@+id/add_po"
+                    android:layout_width="160dp"
+                    android:layout_height="60dp"
+                    android:text="Add PO"
+                    android:textSize="25dp"
+                    android:background="@drawable/round_corner_label"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    />
+            </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/material_blue_800"
+        android:layout_margin="10dp"
+        />
+
+    <ListView
+        android:id="@+id/po_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="3dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:descendantFocusability="beforeDescendants"
+        android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+        style="@style/goodListXlarge"
+        android:listSelector="@color/divider"
+        android:animateLayoutChanges="true"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:fadeScrollbars="true"
+        android:smoothScrollbar="true">
+
+    </ListView>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="15dp"
+
+        >
+        &lt;!&ndash;<TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight=".6"
+            android:text="@string/vendor"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@color/primary_light"
+            android:textSize="14dp"/>&ndash;&gt;
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/round_corner_label"
+
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_transparent"
+                android:textColor="@color/white"
+                android:text="@string/vendor"
+                android:clickable="true"
+                android:textAllCaps="false"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/vendor_btn"
+                android:layout_weight="0.7"
+                android:layout_marginLeft="35dp"
+                />
+            &lt;!&ndash; <com.ebs.ecount.uidesigns.MaterialDesignIconsTextView
+                 android:id="@+id/vendor_arrow"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0"
+                 android:padding="8dp"
+                 android:layout_gravity="right"
+                 android:text="@string/material_icon_chevron_up"
+                 android:textColor="@color/accent"
+                 android:textSize="14sp" />&ndash;&gt;
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/vendor_arrow"
+                android:layout_weight="0.3"
+                android:padding="2dp"
+                android:layout_gravity="right"
+                android:src="@drawable/down"
+                android:layout_marginRight="4dp"
+
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vendor_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:visibility="visible"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vendor_name"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_weight=".6"/>
+            <EditText
+                android:id="@+id/vendor_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:theme="@style/MyEditText"
+                android:hint="Enter the Vendor Name"
+                android:textAllCaps="false"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textSize="25sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vendor_code"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_weight=".6"/>
+            <EditText
+                android:id="@+id/vendor_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:theme="@style/MyEditText"
+                android:hint="Enter the Vendor Code"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_weight=".6"/>
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:theme="@style/MyEditText"
+                android:hint="Enter the Vendor Address"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="15dp"
+
+        >
+        &lt;!&ndash;<TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight=".6"
+            android:text="@string/shipto"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@color/primary_light"
+            android:textSize="14dp"/>&ndash;&gt;
+
+        &lt;!&ndash;  <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">&ndash;&gt;
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/round_corner_label"
+            >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_transparent"
+                android:textColor="@color/white"
+                android:text="@string/shipto"
+                android:clickable="true"
+                android:textAllCaps="false"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/shipto_btn"
+                android:layout_weight="0.7"
+                android:layout_marginLeft="35dp"/>
+            &lt;!&ndash; <com.ebs.ecount.uidesigns.MaterialDesignIconsTextView
+                 android:id="@+id/shipto_arrow"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0"
+                 android:padding="8dp"
+                 android:layout_gravity="right"
+                 android:text="@string/material_icon_chevron_up"
+                 android:textColor="@color/accent"
+                 android:textSize="14sp" />&ndash;&gt;
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/shipto_arrow"
+                android:layout_weight="0.3"
+                android:padding="2dp"
+                android:layout_gravity="right"
+                android:src="@drawable/right"
+                android:visibility="visible"
+                android:layout_marginRight="4dp"
+
+
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shipto_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:visibility="gone"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/company_name"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_weight=".6"/>
+            <EditText
+                android:id="@+id/company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:textAllCaps="false"
+                android:theme="@style/MyEditText"
+                android:hint="Enter the Company Name"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textSize="25sp"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_weight=".6"/>
+            <EditText
+                android:id="@+id/phone"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:theme="@style/MyEditText"
+                android:hint="Enter the Phone Number"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textSize="25sp"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_weight=".6"/>
+            <EditText
+                android:id="@+id/ship_address"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:theme="@style/MyEditText"
+                android:hint="Enter the Ship Address"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textSize="25sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>-->
+    <!--</LinearLayout>
+</ScrollView>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/material_blue_800"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <!--<com.ebs.ecount.uidesigns.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                app:rippleColor="@color/main_color_grey_200" >
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="160dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/round_corner_label"
+                    android:textAllCaps="false"
+                    android:text="@string/clear"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:textSize="25dp"
+                    />
+            </com.ebs.ecount.uidesigns.MaterialRippleLayout>-->
+
+            <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                app:rippleColor="@color/main_color_grey_200" >
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="160dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/round_corner_label"
+                    android:textAllCaps="false"
+                    android:text="@string/next"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    />
+            </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

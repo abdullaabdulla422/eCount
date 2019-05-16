@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/material_blue_800_new"
+            android:gravity="center">
+
+
+
+           <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/back"
+               tools:ignore="ContentDescription" />
+
+            <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center"
+                app:rippleColor="@color/main_color_grey_200" >
+                <Button
+                    android:id="@+id/physical_count_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/material_blue_800_new"
+                    android:inputType="textCapSentences"
+                    android:textAllCaps="false"
+                    android:text="@string/back"
+                    android:textColor="#fff"
+                    android:textSize="25sp"
+                   />
+            </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+            <TextView
+                android:id="@+id/text_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:text="@string/part_phy_and_cyc_count"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner_label"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/color_transparent"
+                    android:textColor="@color/white"
+                    android:text="@string/filter_details"
+                    android:clickable="true"
+                    android:textAllCaps="false"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/filter_btn"
+                    android:layout_weight="0.7"
+                    android:layout_marginLeft="30dp"
+                    />
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/filter_arrow"
+                    android:layout_weight="0.3"
+                    android:padding="2dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/down"
+                    android:layout_marginRight="4dp"
+
+
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/filter_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txt_branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="@string/branch"
+                android:textStyle="bold"
+                android:layout_weight="0.6"
+                android:textSize="25dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+
+                >
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/branch_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:completionHintView="@string/loading"
+                    android:drawablePadding="1.5dip"
+                    android:gravity="center_vertical"
+                    android:popupBackground="#000000"
+                    android:layout_marginRight="50dp"
+                    android:theme="@style/MyEditText"
+                    android:imeOptions="actionUnspecified|actionDone"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:hint="Enter the Branch Number"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text"
+                    android:textSize="25dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/branch_list"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/blue_arrow_down"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="end|center"
+                    android:layout_marginRight="3.5dp"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txt_processid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="@string/process_id"
+                android:textStyle="bold"
+                android:layout_weight="0.6"
+                android:textSize="25dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+
+                >
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/process_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:completionHintView="@string/loading"
+                    android:drawablePadding="1.5dip"
+                    android:gravity="center_vertical"
+                    android:popupBackground="#000000"
+                    android:layout_marginRight="50dp"
+                    android:theme="@style/MyEditText"
+                    android:imeOptions="actionUnspecified|actionDone"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:hint="Enter the Process Id"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text"
+                    android:textSize="25dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/filter_process"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/blue_arrow_down"
+                    android:layout_weight="0.1"
+                    android:layout_gravity="end|center"
+                    android:layout_marginRight="3.5dp"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/physica_Counitng_processid"
+            android:layout_width="430dp"
+            android:layout_height="match_parent"
+            android:divider="@drawable/list_divider"
+            android:scrollbars="none"
+            android:choiceMode="singleChoice"
+            android:listSelector="@color/divider"
+            android:dividerHeight="3dp"
+            android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+            android:visibility="gone"
+            android:background="@color/material_blue_800"
+            android:layout_gravity="right"
+            android:layout_marginRight="60dp"
+            >
+
+        </ListView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:id="@+id/txt_startingbin"
+                android:text="@string/start_bin"
+                android:textStyle="bold"
+                android:layout_weight="0.6"
+                android:textSize="25dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+
+                >
+                <EditText
+                    android:id="@+id/startBin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="25dp"
+                    android:singleLine="true"
+                    android:hint="Enter Start Bin Location"
+                    android:layout_marginRight="50dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_text"
+                    android:theme="@style/MyEditText"
+                    />
+
+                <ImageView
+                    android:id="@+id/startbin_search"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end|center"
+                    android:src="@drawable/search"
+
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txt_endingbin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="@string/end_bin"
+                android:textStyle="bold"
+                android:layout_weight="0.6"
+                android:textSize="25dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+
+                >
+                <EditText
+                    android:id="@+id/endBin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="25dp"
+                    android:singleLine="true"
+                    android:hint="Enter End Bin Location"
+                    android:layout_marginRight="50dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_text"
+                    android:theme="@style/MyEditText"
+                    />
+
+                <ImageView
+                    android:id="@+id/endbin_search"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end|center"
+                    android:src="@drawable/search"
+
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txt_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="@string/partno"
+                android:textStyle="bold"
+                android:layout_weight="0.6"
+                android:textSize="25dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+
+                >
+                <EditText
+                    android:id="@+id/partno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="25dp"
+                    android:singleLine="true"
+                    android:hint="Enter the Part Number"
+                    android:layout_marginRight="40dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_text"
+                    android:theme="@style/MyEditText"
+                    />
+
+                <ImageView
+                    android:id="@+id/partno_search"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end|center"
+                    android:src="@drawable/search"
+
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:weightSum="1"
+            android:gravity="right"
+            >
+
+            <LinearLayout
+                android:id="@+id/handwritesContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+
+                >
+                <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rippleColor="@color/main_color_grey_200" >
+                    <Button
+                        android:id="@+id/hand_writes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="Hand Writes"
+                        android:textSize="23dp"
+                        android:background="@drawable/round_corner_label"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        />
+                </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/varianceContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:layout_gravity="center"
+                android:visibility="gone"
+
+                >
+                <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rippleColor="@color/main_color_grey_200"
+                    android:layout_margin="5dp">
+                    <Button
+                        android:id="@+id/variance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="Variance"
+                        android:textSize="23dp"
+                        android:background="@drawable/round_corner_label"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        />
+                </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/partsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:layout_gravity="center"
+
+                >
+                <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rippleColor="@color/main_color_grey_200"
+                    android:layout_margin="5dp">
+                    <Button
+                        android:id="@+id/partnotcounted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="Parts Not Counted"
+                        android:textSize="23dp"
+                        android:background="@drawable/round_corner_label"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        />
+                </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/filterContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                >
+                <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:rippleColor="@color/main_color_grey_200"
+                    android:layout_margin="5dp">
+                    <Button
+                        android:id="@+id/physical_count_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="Load"
+                        android:textSize="23dp"
+                        android:background="@drawable/round_corner_label"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+
+                        />
+                </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/material_blue_800"
+            android:layout_margin="5dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/count_label_new"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="@drawable/round_corner_label"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/part_count_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="All Parts Counted for this Process Id"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/count_label"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="@drawable/round_corner_label"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0.50"
+            android:weightSum="1">
+        <TextView
+            android:id="@+id/part_text_demo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Mfr"
+            android:textColor="@color/white"
+            android:layout_weight="0.50"
+            android:textSize="25sp"
+            android:gravity="left|center"
+            />
+        <TextView
+            android:id="@+id/mfr_text_demo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Part"
+            android:textColor="@color/white"
+            android:layout_weight="0.50"
+            android:textSize="25sp"
+            android:gravity="left|center"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="0.50"
+            android:weightSum="1">
+
+        <TextView
+            android:id="@+id/desc_text_demo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Bin Location"
+            android:textColor="@color/white"
+            android:layout_weight="0.50"
+            android:textSize="25sp"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/qty_text_demo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Qty"
+            android:textColor="@color/white"
+            android:layout_weight="0.50"
+            android:textSize="25sp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <!--<ListView
+        android:id="@+id/physica_Counitng_List"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="3dp"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+            style="@style/goodListXlarge"
+            android:listSelector="@color/divider"
+            android:animateLayoutChanges="true"
+            android:choiceMode="singleChoice"
+            android:divider="@null"
+            android:fadeScrollbars="true"
+            android:smoothScrollbar="true">
+
+        </ListView>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/physica_Counitng_List"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        style="@style/goodListXlarge"
+        android:listSelector="@color/divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/material_blue_800"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                />
+
+<LinearLayout
+
+    android:id="@+id/submitContainer"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:visibility="visible"
+    >
+    <com.ebs.ecount.uidesigns.MaterialRippleLayout
+        style="@style/RippleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rippleColor="@color/main_color_grey_200" >
+    <Button
+        android:id="@+id/physical_count_submit"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:text="Submit"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@drawable/round_corner_label"
+        android:textColor="@color/white"
+
+        />
+</com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+</LinearLayout>
+
+        </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:weightSum="1"
+        android:background="@color/material_blue_800_new"
+        >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="18dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <com.ebs.ecount.uidesigns.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            app:rippleColor="@color/main_color_grey_200" >
+            <Button
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_blue_800_new"
+                android:inputType="textCapSentences"
+                android:textAllCaps="false"
+                android:text="@string/back"
+
+                android:textColor="#fff"
+                android:textSize="14sp"
+
+                />
+        </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:text="@string/add_freight"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+        <com.ebs.ecount.uidesigns.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:layout_marginRight="5dp"
+            app:rippleColor="@color/main_color_grey_200"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/spread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/material_blue_800_new"
+                android:inputType="textCapSentences"
+                android:textAllCaps="false"
+                android:text="@string/landed"
+                android:textColor="#fff"
+                android:textSize="14sp"
+
+                />
+        </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/frieght_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1.5dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:descendantFocusability="beforeDescendants"
+        android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+        style="@style/goodList"
+        android:listSelector="@color/divider"
+        android:animateLayoutChanges="true"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:fadeScrollbars="true"
+        android:smoothScrollbar="true">
+
+    </ListView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="3dp"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/material_blue_800"
+            />
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                app:rippleColor="@color/main_color_grey_200" >
+                <Button
+                    android:id="@+id/btn_done"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/submit"
+                    android:background="@drawable/round_corner_label"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    />
+            </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

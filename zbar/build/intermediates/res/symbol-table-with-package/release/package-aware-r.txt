@@ -1,0 +1,9 @@
+me.dm7.barcodescanner.zbar
+int attr shouldScaleToFill 0x7f040001
+int color viewfinder_border 0x7f060001
+int color viewfinder_laser 0x7f060002
+int color viewfinder_mask 0x7f060003
+int integer viewfinder_border_length 0x7f0d0001
+int integer viewfinder_border_width 0x7f0d0002
+int[] styleable BarcodeScannerView { 0x7f040001 }
+int styleable BarcodeScannerView_shouldScaleToFill 0

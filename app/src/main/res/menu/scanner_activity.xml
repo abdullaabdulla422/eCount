@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cognex.dataman.mxeasysdksampleapp.MainActivity" >
+    <item android:id="@+id/action_device" android:showAsAction="always" android:orderInCategory="100" android:title="Device" />
+</menu>

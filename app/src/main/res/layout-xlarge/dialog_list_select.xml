@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_box">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:background="@color/material_blue_800_new"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="32dp"
+                        android:text="@string/pick_your_selection"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/round_corner"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="2dp"
+
+        >
+        <ImageView
+            android:id="@+id/clear_username"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/search_icon"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center|end"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:backgroundTintMode="@android:color/transparent"
+            android:drawableBottom="@android:color/transparent"
+            android:ems="10"
+            android:hint="@string/search"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:textColor="@color/primary_text"
+            android:textSize="25sp"
+            android:textCursorDrawable="@drawable/colour_cursor"/>
+
+    </LinearLayout>-->
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:divider="@drawable/divider"
+        style="@style/goodListXlarge"
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/divider"
+        android:dividerHeight="3dp"
+        android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+        android:layout_gravity="center"
+        ></ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/material_blue_800"
+
+            ></View>
+
+
+        <com.ebs.ecount.uidesigns.fonts.RobotoTextView
+
+            android:id="@+id/dialog_social_ok"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/selector_dialog_warning"
+            android:gravity="center"
+            android:minWidth="64dp"
+            android:padding="8dp"
+            android:text="@string/cancel"
+            android:textColor="@color/primary_text"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            app:typeface="robotoMedium" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

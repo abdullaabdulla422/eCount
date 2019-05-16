@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+         android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/material_blue_800_new"
+        >
+
+
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <com.ebs.ecount.uidesigns.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            app:rippleColor="@color/main_color_grey_200" >
+            <Button
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_blue_800_new"
+                android:inputType="textCapSentences"
+                android:textAllCaps="false"
+                android:text="@string/back"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+        </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        <TextView
+            android:id="@+id/header_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:text="@string/replace_parts"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginRight="65dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_marginBottom="80dp"
+        android:layout_below="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:scrollbarDefaultDelayBeforeFade="3000"
+        android:scrollbarFadeDuration="2000"
+        android:scrollbars="none"
+        android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/layout_Order_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_replaceorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text= "@string/po"
+                    android:textSize="18dp"
+                    android:layout_weight="0.7"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3">
+
+                    <EditText
+                        android:id="@+id/order_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_weight="0.3"
+                        android:singleLine="true"
+                        android:textAllCaps="false"
+                        android:textSize="18dp"
+                        android:maxLength="8"
+                        android:hint="Enter the Order Number"
+                        android:textColor="@color/primary_text"
+                        android:theme="@style/MyEditText"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_orderlist"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/blue_arrow_down"
+                        android:layout_weight="0.1"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginRight="3.5dp"
+                        android:layout_marginBottom="10dp"
+                        tools:ignore="ContentDescription" />
+
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_old_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_oldpartno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text= "@string/old_parts_no"
+                    android:textSize="18dp"
+                    android:layout_weight="0.7"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold"/>
+
+                <FrameLayout
+                    android:layout_weight="0.3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/old_parts_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textAllCaps="false"
+                        android:textSize="18dp"
+                        android:hint="Enter the Old Part Number"
+                        android:textColor="@color/primary_text"
+                        android:theme="@style/MyEditText"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_partlist"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/blue_arrow_down"
+                        android:layout_weight="0.1"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginRight="3.5dp"
+                        android:layout_marginBottom="10dp"
+                        tools:ignore="ContentDescription" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:weightSum="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "@string/parts_no"
+                android:textSize="18dp"
+                android:layout_weight="0.7"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/parts_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:textAllCaps="false"
+                android:textSize="18dp"
+                android:hint="Enter the Parts Number"
+                android:textColor="@color/primary_text"
+                android:theme="@style/MyEditText"
+                android:inputType="text|textMultiLine"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:singleLine="true"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_mfr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "@string/mfr"
+                android:textSize="18dp"
+                android:layout_weight="0.7"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/mfr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_weight="0.3"
+                android:singleLine="true"
+                android:textAllCaps="false"
+                android:textSize="18dp"
+                android:hint="Enter the Mfr"
+                android:textColor="@color/primary_text"
+                android:theme="@style/MyEditText"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "@string/quantity"
+                android:textSize="18dp"
+                android:layout_weight="0.7"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_weight="0.3"
+                android:singleLine="true"
+                android:textAllCaps="false"
+                android:textSize="18dp"
+                android:hint="Enter the Quantity"
+                android:textColor="@color/primary_text"
+                android:theme="@style/MyEditText"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:id="@+id/txt_bin"
+                android:text="@string/bin_loc"
+                android:textStyle="bold"
+                android:layout_weight="0.7"
+                android:textSize="18dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+
+                >
+                <EditText
+                    android:id="@+id/bin_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+                    android:hint="Enter the Bin Location"
+                    android:layout_marginRight="40dp"
+                    android:textColor="@color/primary_text"
+                    android:theme="@style/MyEditText"
+                    />
+
+                <ImageView
+                    android:id="@+id/bin_search"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end|center"
+                    android:src="@drawable/search"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text= "@string/transfer"
+                    android:textSize="18dp"
+                    android:layout_weight="0.07"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold"/>
+                <CheckBox
+                    android:id="@+id/transfer_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.93"
+                    android:buttonTint="@color/material_blue_800_new"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_anotherpart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text= "@string/anotherpart"
+                    android:textSize="18dp"
+                    android:layout_weight="0.07"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold"/>
+                <CheckBox
+                    android:id="@+id/AddAnother_part"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.93"
+                    android:buttonTint="@color/material_blue_800_new"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/material_blue_800"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <com.ebs.ecount.uidesigns.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            app:rippleColor="@color/main_color_grey_200" >
+            <Button
+                android:id="@+id/btn_replace"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:text="@string/replace"
+                android:background="@drawable/round_corner_label"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                />
+        </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

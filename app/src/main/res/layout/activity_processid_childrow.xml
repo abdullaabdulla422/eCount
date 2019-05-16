@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/process_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100001"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:textColor="@color/primary_text"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+

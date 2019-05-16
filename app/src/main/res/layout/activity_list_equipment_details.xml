@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/material_blue_800_new"
+        >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="18dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <com.ebs.ecount.uidesigns.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            app:rippleColor="@color/main_color_grey_200" >
+            <Button
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_blue_800_new"
+                android:inputType="textCapSentences"
+                android:textAllCaps="false"
+                android:text="@string/back"
+                android:textColor="#fff"
+                android:textSize="14sp"
+
+                />
+        </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:text="@string/equp_detail"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginRight="45dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:divider="@color/divider"
+        android:dividerHeight="1.5dp"
+        android:id="@+id/equp_list"
+        style="@style/goodList"
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/divider"
+        android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+        >
+
+    </ListView>
+
+</LinearLayout>

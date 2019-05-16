@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_dashboard_list"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:weightSum="2"
+
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.47"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/unit_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unit ID"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="@color/primary_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".53"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_branch_type_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="branch"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="@color/primary_text"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:weightSum="3">
+            <TextView
+                android:id="@+id/make_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="make"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1.1"
+                android:textColor="@color/primary_text"/>
+            <TextView
+                android:id="@+id/model_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Make"
+                android:textSize="14dp"
+                android:layout_marginRight="5dp"
+
+                android:textStyle="bold"
+                android:layout_weight="1.1"
+                android:textColor="@color/primary_text"/>
+            <TextView
+                android:id="@+id/serial_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Serial"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_weight=".8"
+                android:textColor="@color/primary_text"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/desc_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="desc"
+                android:singleLine="true"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

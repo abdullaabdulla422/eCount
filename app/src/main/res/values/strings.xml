@@ -1,0 +1,219 @@
+<resources>
+    <string name="app_name">eCount</string>
+
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_ok">Ok</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="LOADING">Loading…</string>
+
+    <string name="version_name">V 2.2.12</string>
+    <string name="vendor_reference">Vendor Reference :</string>
+
+    <string name="progressBar_pref_key">progressBar_pref_key</string>
+    <string name="progressBar_pref_defValue">0</string>
+    <string name="pref_colors_header_title">ProgressBar colors</string>
+    <string name="firstcolor_pref_key">firstcolor_pref_key</string>
+    <string name="secondcolor_pref_key">secondcolor_pref_key</string>
+    <string name="thirdcolor_pref_key">thirdcolor_pref_key</string>
+    <string name="fourthcolor_pref_key">fourthcolor_pref_key</string>
+
+    <string name="scanner_activity">Mobile Scanner</string>
+    <string name="mx_activity">MX Scanner</string>
+
+    <string name="equp_id">Equipment Id :</string>
+    <string name="attachments">Attachment :</string>
+    <string name="equipid">Equipment Id :</string>
+    <string name="parts_no">Part# :</string>
+    <string name="old_part_no">Old Part# :</string>
+    <string name="user">User :</string>
+    <string name="mfr">Mfr :</string>
+    <string name="quantity">Quantity :</string>
+    <string name="bin_loc">Bin Location :</string>
+    <string name="process_id">Process Id :</string>
+    <string name="description">Description :</string>
+    <string name="search">Search</string>
+    <string name="loading">Loading…</string>
+    <string name="filter">Filter</string>
+    <string name="submit">Submit</string>
+    <string name="mxscanner">MX Scanner</string>
+    <string name="mobilecam">Mobile Scanner</string>
+    <string name="yes">Yes</string>
+    <string name="complete">Complete</string>
+    <string name="Incomplete">InComplete</string>
+    <string name="no">No</string>
+    <string name="add">Add</string>
+    <string name="receive">Receive</string>
+
+    <string name="replace">Replace</string>
+    <string name="po_no">PO# :</string>
+    <string name="part_no">Part# :</string>
+    <string name="partno">Part :</string>
+    <string name="po_qty">PO Qty :</string>
+    <string name="receive_qty">Receive Qty :</string>
+    <string name="received_qty">Received Qty :</string>
+    <string name="done">Done</string>
+    <string name="transfer">Transfer History :</string>
+    <string name="anotherpart">Add Another Part ?</string>
+    <string name="equp_inventory">Inventory</string>
+    <string name="add_freight">Add Freight</string>
+    <string name="parts_details">Add Part</string>
+    <string name="receive_details">Receive Part</string>
+
+    <string name="parts_detail">Part Detail</string>
+    <string name="multiple_po">Multiple PO#</string>
+    <string name="po_quantity">PO Quantity :</string>
+    <string name="receive_quantity">Receive Qty :</string>
+    <string name="message">Message</string>
+    <string name="search_details">Search Details</string>
+    <string name="equip_details">Equipment Details</string>
+    <string name="branch_and_processID">Branch &amp; PID</string>
+    <string name="filter_details">Filter Details</string>
+    <string name="br">Br :</string>
+    <string name="customername">Customer Name :</string>
+    <string name="unit_id">Unit Id :</string>
+    <string name="Order">Order :</string>
+    <string name="type">Type :</string>
+    <string name="order_date">Order Date :</string>
+    <string name="spread">Spread</string>
+    <string name="landing">Landing Cost</string>
+    <string name="landed">Landed Cost</string>
+    <string name="alert">Alert</string>
+    <string name="Dialogalert">Alert!</string>
+    <string name="Order_no">Order# :</string>
+    <string name="tansfer_history">Transfer History</string>
+    <string name="unit_weight">Weight :</string>
+    <string name="value">Value :</string>
+    <string name="replace_parts">Replace Parts</string>
+    <string name="equp_detail">Equipment Detail</string>
+    <string name="pick_your_selection">Pick your selection</string>
+    <!--<string name="update_equp">"Update Equipment</string>-->
+    <string name="update_equp">Count</string>
+
+    <string name="update">Update</string>
+    <string name="model">Model :</string>
+    <string name="inbound">InBound :</string>
+    <string name="enterinbound">Enter the InBound</string>
+    <string name="outbound">OutBound :</string>
+    <string name="enteroutbound">Enter the OutBound</string>
+    <string name="serial_no">Serial# :</string>
+    <string name="manufacturer">Manufacturer :</string>
+    <string name="make">Make:</string>
+    <string name="back">Back</string>
+    <string name="textURL">Set URL to access the data \n Example: http://example.com/eCount</string>
+    <string name="save">Save</string>
+    <string name="attachment_title">Attachment</string>
+    <string name="handwrites_title">Hand Writes</string>
+    <string name="attachment">Attachment :</string>
+    <string name="equp_name">Equipment Name :</string>
+    <string name="notes">Notes :</string>
+    <string name="attach">Attach</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="logout">Logout</string>
+    <string name="warning">Warning</string>
+    <string name="rememberme">Remember Me</string>
+    <string name="clear">Clear</string>
+    <string name="next">Next</string>
+    <string name="add_new_equip">Add Equipment</string>
+    <string name="hand_writes">Hand Writes</string>
+    <string name="old_parts_no">Old Part# :</string>
+    <string name="shipto">Shipping Information</string>
+    <string name="cancel">Cancel</string>
+    <string name="proceed">Proceed</string>
+    <string name="ok">Ok</string>
+    <string name="vendor">Vendor Details</string>
+    <string name="spread_alart">Are you sure do want spread the below values to all fields?</string>
+    <string name="po_complete_alart">Are you sure do want to complete this Ordered Number?</string>
+    <string name="material_icon_chevron_up">&#xe877;</string>
+    <string name="material_icon_chevron_down">&#xe874;</string>
+
+    <string name="part_receipts">Parts Receipt</string>
+    <string name="part_phy_and_cyc_count">Physical and Cycle Counting</string>
+    <string name="equip_phy_invent">Equipment Inventory</string>
+    <string name="landing_cost">Landing Cost</string>
+    <string name="parts_receiving_details">Parts Receiving</string>
+
+    <string name="refresh">Refresh</string>
+
+    <string name="UnCounted">UnCounted</string>
+    <string name="Counted">Counted</string>
+
+
+    <string name="Process_id">Process Id :</string>
+    <string name="start_bin">Starting Bin Loc :</string>
+    <string name="end_bin">Ending Bin Loc :</string>
+    <string name="vendor_name">Vendor Name :</string>
+    <string name="vendor_code">Vendor Code :</string>
+    <string name="vendor_no">Vendor# :</string>
+    <string name="address">Address :</string>
+    <string name="company_name">Company Name :</string>
+    <string name="phone">Phone :</string>
+    <string name="branch">Branch# :</string>
+    <string name="branch_text">Branch :</string>
+    <string name="po">PO# :</string>
+
+    <!-- Content description strings -->
+    <string name="cd_background_image">background image</string>
+    <string name="cd_main_image">main image</string>
+
+
+    <string name="fontello_logo">&#xe8ad;</string>
+    <string name="fontello_search">&#xea01;</string>
+    <string name="fontello_x_mark">&#xe887;</string>
+    <string name="fontello_x_mark_masked">&#xe885;</string>
+    <string name="fontello_microfon">&#xea18;</string>
+    <string name="fontello_user">&#xe800;</string>
+    <string name="fontello_password">&#xe9df;</string>
+    <string name="fontello_upload">&#xeb30;</string>
+    <string name="fontello_play">&#xea7d;</string>
+    <string name="fontello_heart_empty">&#xe9b5;</string>
+    <string name="fontello_heart_full">&#xe9b6;</string>
+    <string name="fontello_drag_and_drop">&#xe988;</string>
+
+    <string name="basic_action_uncount">UnCount</string>
+    <string name="basic_action_1">Remove</string>
+    <string name="basic_action_3">Replace</string>
+    <string name="action_1">Add Freight</string>
+    <string name="return_label">Return</string>
+    <string name="basic_action_2">Complete</string>
+    <string name="basic_del">Delete</string>
+    <string name="str_orange">#fe7b27</string>
+    <string name="str_green">#3cac69</string>
+    <string name="str_red">#FF4444</string>
+    <string name="str_yellow">#FFBB33</string>
+    <string name="str_sky_blue">#33B5E5</string>
+
+    <string name="submit_entered_items">Submit Entered Items</string>
+    <string name="blanket_receipt">Blanket Receipt</string>
+
+
+    <string name="pm_part_setup">PmPart Setup</string>
+    <string name="MFG">Mfg :</string>
+    <string name="Part_num">Part # :</string>
+    <string name="Weight1">Weight :</string>
+    <string name="comm">COMM :</string>
+    <string name="MFG_Class">Mfg Class :</string>
+    <string name="unit_standard">Unit Standard :</string>
+
+    <string name="Sell_1">Sell 1 :</string>
+    <string name="Sell_2">Sell 2 :</string>
+    <string name="Sell_3">Sell 3 :</string>
+    <string name="Sell_4">Sell 4 :</string>
+    <string name="Sell_5">Sell 5 :</string>
+
+    <string name="Cost">Cost :</string>
+    <string name="Core_list">Core List :</string>
+    <string name="Core_cost">Core Cost :</string>
+
+    <string name="Description">Description :</string>
+
+    <string name="btn_OK">OK</string>
+    <string name="btn_CANCEL">Cancel</string>
+    <string name="hand_writes_inventory">Hand Writes</string>
+    <string name="make_and_model">Make &amp; Model :</string>
+    <string name="mfg">Mfg :</string>
+    <string name="weight">Weight :</string>
+
+
+</resources>

@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/material_blue_800_new"
+        >
+
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/back"
+            tools:ignore="ContentDescription" />
+
+        <com.ebs.ecount.uidesigns.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="center"
+            app:rippleColor="@color/main_color_grey_200" >
+            <Button
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_blue_800_new"
+                android:inputType="textCapSentences"
+                android:textAllCaps="false"
+                android:text="@string/back"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+        </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        <TextView
+            android:id="@+id/txt_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:text="@string/equp_inventory"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginRight="100dp"/>
+
+    </LinearLayout>
+
+    <!--<ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:scrollbarDefaultDelayBeforeFade="3000"
+        android:scrollbarFadeDuration="2000"
+        android:scrollbars="none"
+        android:fillViewport="true" >-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_corner_label"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/color_transparent"
+                            android:textColor="@color/white"
+                            android:text="@string/branch_and_processID"
+                            android:clickable="true"
+                            android:textAllCaps="false"
+                            android:textSize="18dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:id="@+id/filter_btn_1"
+                            android:layout_weight="0.7"
+                            android:layout_marginLeft="60dp" />
+
+                        <ImageView
+                            android:id="@+id/filter_arrow_1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="0.3"
+                            android:background="@color/color_transparent"
+                            android:padding="2dp"
+                            android:src="@drawable/down"
+
+
+                            tools:ignore="ContentDescription" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/filter_layout_1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/txt_branch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="@string/branch"
+                            android:textColor="@color/primary_text"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/branch_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="40dp"
+                                android:layout_weight=".4"
+                                android:completionHintView="@string/loading"
+                                android:drawablePadding="1.5dip"
+                                android:gravity="center_vertical"
+                                android:hint="Enter the Branch Number"
+                                android:imeOptions="actionUnspecified|actionDone"
+                                android:inputType="number"
+                                android:popupBackground="#000000"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textAllCaps="false"
+                                android:textColor="@color/primary_text"
+                                android:textSize="18dp"
+                                android:theme="@style/MyEditText"
+                                tools:ignore="HardcodedText" />
+
+                            <ImageView
+                                android:id="@+id/branch_list"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="end|center"
+                                android:layout_marginRight="3.5dp"
+                                android:layout_weight="0.1"
+                                android:src="@drawable/blue_arrow_down"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/txt_processid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="@string/process_id"
+                            android:textColor="@color/primary_text"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/processId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="35dp"
+                                android:completionHintView="@string/loading"
+                                android:drawablePadding="1.5dip"
+                                android:gravity="center_vertical"
+                                android:hint="Enter the Process Id"
+                                android:imeOptions="actionUnspecified|actionDone"
+                                android:inputType="number"
+                                android:popupBackground="#000000"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textAllCaps="false"
+                                android:textColor="@color/primary_text"
+                                android:textSize="18dp"
+                                android:theme="@style/MyEditText"
+
+                                />
+
+                            <ImageView
+                                android:id="@+id/process_id"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="end|center"
+                                android:layout_marginRight="3.5dp"
+                                android:layout_weight="0.1"
+                                android:src="@drawable/blue_arrow_down"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/text_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:text="@string/description"
+                            android:textColor="@color/primary_text"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+
+                            >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/description"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="false"
+                                android:completionHintView="@string/loading"
+                                android:drawablePadding="1.5dip"
+                                android:gravity="center_vertical"
+                                android:hint="Description"
+                                android:imeOptions="actionUnspecified|actionDone"
+                                android:popupBackground="#000000"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textAllCaps="false"
+                                android:textColor="@color/primary_text"
+                                android:textSize="18dp"
+                                android:theme="@style/MyEditText"
+
+                                />
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="end|center"
+                                android:layout_marginRight="3.5dp"
+                                android:layout_weight="0.1"
+                                android:src="@drawable/blue_arrow_down"
+                                tools:ignore="ContentDescription" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner_label"
+                    >
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/color_transparent"
+                        android:textColor="@color/white"
+                        android:text="@string/equip_details"
+                        android:clickable="true"
+                        android:textAllCaps="false"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:id="@+id/filter_btn"
+                        android:layout_weight="0.7"
+                        android:layout_marginLeft="60dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/filter_arrow"
+                        android:layout_weight="0.3"
+                        android:padding="2dp"
+                        android:layout_gravity="right"
+                        android:src="@drawable/down"
+                        android:layout_marginRight="4dp"
+                        android:background="@color/color_transparent"
+
+
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:id="@+id/txt_equipmentid"
+                android:text="@string/equp_id"
+                android:textStyle="bold"
+                android:layout_weight="0.6"
+                android:textSize="18dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+
+                >
+                <EditText
+                    android:id="@+id/equp_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapCharacters"
+                    android:textSize="18dp"
+                    android:singleLine="true"
+                    android:hint="Enter the Equipment Id"
+                    android:layout_marginRight="50dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_text"
+                    android:theme="@style/MyEditText"
+                    android:maxLength="12"
+                    />
+
+                <ImageView
+                    android:id="@+id/equpiment_id"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end|center"
+                    android:src="@drawable/search"
+
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txt_make"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="@string/make_and_model"
+                android:textColor="@color/primary_text"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:weightSum="1"
+                >
+
+
+                <EditText
+                    android:id="@+id/make"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Make-Model"
+                    android:layout_weight="0.8"
+                    android:inputType="textCapCharacters"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:maxLength="16"
+                    android:textColor="@color/primary_text"
+                    android:textSize="18dp"
+                    android:theme="@style/MyEditText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hyphen"
+                    android:text="-"
+                    android:textSize="18dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+
+                <EditText
+                    android:visibility="gone"
+                    android:id="@+id/model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter the Model"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_text"
+                    android:textSize="18dp"
+                    android:theme="@style/MyEditText" />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_margin="5dp"
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:weightSum="1"
+             android:orientation="horizontal">
+             <TextView
+                 android:id="@+id/txt_model"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text= "@string/model"
+                 android:textSize="18dp"
+                 android:layout_weight="0.6"
+                 android:textColor="@color/primary_text"
+                 android:textStyle="bold"/>
+             <EditText
+                 android:id="@+id/model"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:inputType="textCapCharacters"
+                 android:layout_weight="0.4"
+                 android:textSize="18dp"
+                 android:singleLine="true"
+                 android:hint="Enter the Model"
+                 android:textColor="@color/primary_text"
+                 android:textAllCaps="false"
+                 android:theme="@style/MyEditText"
+                 android:maxLength="12"
+                 />
+         </LinearLayout>-->
+
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_serialno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "@string/serial_no"
+                android:textSize="18dp"
+                android:layout_weight="0.6"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/serial_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="18dp"
+                android:layout_weight="0.4"
+                android:singleLine="true"
+                android:hint="Enter the Serial Number"
+                android:textColor="@color/primary_text"
+                android:theme="@style/MyEditText"
+                android:textAllCaps="false"
+                android:maxLength="15"
+                />
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txt_serialno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="@string/serial_no"
+                android:textStyle="bold"
+                android:layout_weight="0.6"
+                android:textSize="18dp"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+
+                >
+                <EditText
+                    android:id="@+id/serial_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:hint="Enter the Serial Number"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_text"
+                    android:theme="@style/MyEditText"
+                    android:maxLength="12"
+                    android:inputType="textCapCharacters|textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:layout_marginRight="50dp"
+                    android:singleLine="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/serial_scanner"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end|center"
+                    android:src="@drawable/search"
+
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filterContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:paddingRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:rippleColor="@color/main_color_grey_200">
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_corner_label"
+                        android:singleLine="true"
+                        android:text="@string/hand_writes_inventory"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:visibility="invisible"
+                        android:layout_weight="1"/>
+                </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:weightSum="1"
+                android:layout_weight=".3"
+                >
+
+                <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    app:rippleColor="@color/main_color_grey_200">
+
+                    <Button
+                        android:id="@+id/uncounted"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_corner_label"
+                        android:text="@string/UnCounted"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        />
+                </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+                <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="2dp"
+                    android:paddingLeft="2dp"
+                    android:layout_weight=".4"
+                    app:rippleColor="@color/main_color_grey_200">
+
+                    <Button
+                        android:id="@+id/counted"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_corner_label"
+                        android:text="@string/Counted"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        />
+                </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+                <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:layout_weight=".4"
+                    app:rippleColor="@color/main_color_grey_200">
+
+                    <Button
+                        android:id="@+id/refresh"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/round_corner_label"
+                        android:text="@string/refresh"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        />
+                </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/material_blue_800"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/equp_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="3dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:descendantFocusability="beforeDescendants"
+        android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+        style="@style/goodListXlarge"
+        android:listSelector="@color/divider"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:fadeScrollbars="true"
+        android:smoothScrollbar="true"
+        >
+
+    </ListView>
+
+
+   <!-- <LinearLayout
+        android:id="@+id/submit_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/material_blue_800"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"/>
+
+        <com.ebs.ecount.uidesigns.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:rippleColor="@color/main_color_grey_200" >
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:text="@string/hand_writes"
+                android:background="@drawable/round_corner_label"                android:textColor="#fff"
+                android:textSize="18dp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+    </LinearLayout>-->
+
+        </LinearLayout>
+
+<!--    </ScrollView>-->
+
+
+</LinearLayout>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/material_blue_800_new"
+        >
+
+
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/back"/>
+
+        <com.ebs.ecount.uidesigns.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+            app:rippleColor="@color/main_color_grey_200" >
+            <Button
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_blue_800_new"
+                android:inputType="textCapSentences"
+                android:textAllCaps="false"
+                android:text="@string/back"
+                android:textColor="#fff"
+                android:textSize="18sp"
+
+                />
+        </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        <TextView
+            android:id="@+id/txt_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:text="@string/handwrites_title"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginRight="60dp"/>
+
+    </LinearLayout>
+
+        <ScrollView
+            android:layout_below="@+id/above"
+            android:layout_marginBottom="75dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:isScrollContainer="true"
+            android:scrollbarDefaultDelayBeforeFade="3000"
+            android:scrollbarFadeDuration="2000"
+            android:scrollbars="none"
+            android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@id/txt_processid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "Process Id :"
+                android:textSize="18dp"
+                android:layout_weight="0.6"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/processid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_weight="0.4"
+                android:enabled="false"
+                android:textSize="18dp"
+                android:singleLine="true"
+                android:hint="Enter the Process Id"
+                android:textColor="@color/primary_text"
+                android:textAllCaps="false"
+                android:theme="@style/MyEditText"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "Branch :"
+                android:textSize="18dp"
+                android:layout_weight="0.6"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/branch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_weight="0.4"
+                android:textSize="18dp"
+                android:enabled="false"
+                android:singleLine="true"
+                android:hint="Enter the Branch"
+                android:textColor="@color/primary_text"
+                android:textAllCaps="false"
+                android:theme="@style/MyEditText"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "Part# :"
+                android:textSize="18dp"
+                android:layout_weight="0.6"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/partno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:enabled="false"
+                android:textSize="18dp"
+                android:hint="Enter the Part Number"
+                android:textColor="@color/primary_text"
+                android:textAllCaps="false"
+                android:theme="@style/MyEditText"
+                android:inputType="text|textMultiLine"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_mfr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "Mfr :"
+                android:textSize="18dp"
+                android:layout_weight="0.6"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+
+                >
+
+                <EditText
+                    android:id="@+id/mfr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:editable="false"
+                    android:hint="Choose the Mfr"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary_text"
+                    android:textSize="18dp"
+                    android:theme="@style/MyEditText" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/img_mfr"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/blue_arrow_down"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginRight="3.5dp"
+                    android:layout_marginBottom="10dp"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "Description :"
+                android:textSize="18dp"
+                android:layout_weight="0.6"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_weight="0.4"
+                android:textSize="18dp"
+                android:enabled="false"
+                android:singleLine="true"
+                android:hint=" Description"
+                android:textColor="@color/primary_text"
+                android:textAllCaps="false"
+                android:theme="@style/MyEditText"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "Quantity :"
+                android:textSize="18dp"
+                android:layout_weight="0.6"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_weight="0.4"
+                android:textSize="18dp"
+                android:imeOptions="actionDone"
+                android:hint="Enter the Quantity"
+                android:maxLength="6"
+                android:textColor="@color/primary_text"
+                android:textAllCaps="false"
+                android:theme="@style/MyEditText"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_binloc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "Bin Locations :"
+                android:textSize="18dp"
+                android:layout_weight="0.6"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+
+                >
+                <EditText
+                    android:id="@+id/bin_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:layout_weight="0.3"
+                    android:textSize="18dp"
+                    android:singleLine="true"
+                    android:enabled="true"
+                    android:hint="Choose the Bin Loc"
+                    android:layout_marginRight="35dp"
+                    android:textColor="@color/primary_text"
+                    android:textAllCaps="false"
+                    android:theme="@style/MyEditText"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_bin"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/blue_arrow_down"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginRight="3.5dp"
+                    android:layout_marginBottom="10dp"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_startingbin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "Primary Bin Loc :"
+                android:textSize="18dp"
+                android:layout_weight="0.6"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/primary_bin_loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_weight="0.4"
+                android:enabled="true"
+                android:textSize="18dp"
+                android:singleLine="true"
+                android:hint="Primary Bin Loc"
+                android:textColor="@color/primary_text"
+                android:textAllCaps="false"
+                android:theme="@style/MyEditText"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_endingbin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text= "Secondary Bin Loc :"
+                android:textSize="18dp"
+                android:layout_weight="0.6"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/secondary_bin_loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_weight="0.4"
+                android:enabled="true"
+                android:textSize="18dp"
+                android:singleLine="true"
+                android:hint="Secondary Bin Loc"
+                android:textColor="@color/primary_text"
+                android:textAllCaps="false"
+                android:theme="@style/MyEditText"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/txt_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/notes"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textSize="18dp"/>
+
+
+            <EditText
+                android:id="@+id/notes"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="0.25"
+                android:gravity="start"
+                android:singleLine="false"
+                android:maxLength="80"
+                android:textAllCaps="false"
+                android:imeOptions="actionDone"
+                android:theme="@style/MyEditText"
+                android:inputType="textNoSuggestions"
+                android:background="@drawable/round_corner"
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+      </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="3dp"
+
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/material_blue_800"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center|bottom"
+            android:layout_gravity="center">
+
+            <!--<com.ebs.ecount.uidesigns.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center"
+                app:rippleColor="@color/main_color_grey_200" >
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:text="Cancel"
+                    android:background="@drawable/round_corner_label"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    />
+            </com.ebs.ecount.uidesigns.MaterialRippleLayout>-->
+
+            <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                app:rippleColor="@color/main_color_grey_200" >
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:text="Submit"
+                    android:background="@drawable/round_corner_label"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    />
+            </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

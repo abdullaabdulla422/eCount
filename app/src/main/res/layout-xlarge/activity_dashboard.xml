@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/material_blue_800_new"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+
+    <com.ebs.ecount.uidesigns.MaterialRippleLayout
+        style="@style/RippleStyle"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        app:rippleColor="@color/main_color_grey_200" >
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="@string/logout"
+            android:layout_gravity="center"
+            android:background="@color/material_blue_800_new"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            />
+    </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+
+
+</LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="20dp"
+    android:gravity="center"
+    android:background="@drawable/round_button_corner"
+    >
+
+   <ImageView
+        android:id="@+id/img_receipt"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/receipt"
+        android:layout_gravity="center"
+       tools:ignore="ContentDescription" />
+
+    <com.ebs.ecount.uidesigns.MaterialRippleLayout
+        style="@style/RippleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        >
+
+        <Button
+            android:id="@+id/part_receipt"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:text="@string/part_receipts"
+            android:background="@color/material_blue_800"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+    </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/round_button_corner"
+            >
+            <ImageView
+                android:id="@+id/img_counting"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/cyclecount"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription" />
+
+            <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                >
+
+
+        <Button
+            android:id="@+id/part_phy_cyclecount"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:background="@color/material_blue_800"
+            android:textSize="30dp"
+            android:text="@string/part_phy_and_cyc_count" />
+
+            </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:background="@drawable/round_button_corner"
+            >
+
+            <ImageView
+                android:id="@+id/img_equp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/equipments"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription" />
+
+            <com.ebs.ecount.uidesigns.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                >
+
+
+        <Button
+            android:id="@+id/equip_phy_invent"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:background="@color/material_blue_800"
+            android:textSize="30dp"
+            android:text="@string/equip_phy_invent"  />
+
+            </com.ebs.ecount.uidesigns.MaterialRippleLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>

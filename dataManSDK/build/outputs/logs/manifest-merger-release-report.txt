@@ -1,0 +1,51 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:1:1-19:12
+INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:1:1-19:12
+	package
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:2:5-37
+		INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml
+		INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:4:5-30
+		INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml
+		INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:3:5-28
+		INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml
+		INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml
+uses-feature#android.hardware.usb.host
+ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:6:5-62
+	android:name
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:6:19-59
+uses-sdk
+ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:8:5-10:41
+INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:8:5-10:41
+INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:8:5-10:41
+INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:8:5-10:41
+INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:8:5-10:41
+	android:targetSdkVersion
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:10:9-38
+		INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml
+		INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:9:9-35
+		INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml
+		INJECTED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml
+application
+ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:12:5-17:19
+	android:label
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:15:9-41
+	android:icon
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:14:9-45
+	android:allowBackup
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:13:9-35
+	android:theme
+		ADDED from /home/techunity/AndroidStudioProjects/eCount/dataManSDK/src/main/AndroidManifest.xml:16:9-40

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    package="me.dm7.barcodescanner.zbar"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="9" />
+
+    <application tools:overrideLibrary="me.dm7.barcodescanner.core" >
+    </application>
+
+</manifest>

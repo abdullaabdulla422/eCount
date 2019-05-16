@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_box">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="2dp"
+        android:orientation="horizontal"
+        android:background="@color/material_blue_800_new"
+        >
+
+        <TextView
+            android:id="@+id/txt_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:text="@string/pick_your_selection"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="@drawable/round_corner"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="2dp"
+
+        >
+        <ImageView
+            android:id="@+id/clear_username"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/search_icon"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/search_box"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            android:backgroundTintMode="@android:color/transparent"
+            android:drawableBottom="@android:color/transparent"
+            android:ems="10"
+            android:hint="@string/search"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp"
+            android:textCursorDrawable="@drawable/colour_cursor"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        style="@style/goodList"
+        android:divider="@drawable/divider"
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/divider"
+        android:dividerHeight="1.5dp"
+        android:layoutAnimation="@anim/layout_bottom_to_top_slide"
+        >
+
+    </ListView>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/empty"
+        android:text=""
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/material_blue_800"
+
+            ></View>
+
+
+        <com.ebs.ecount.uidesigns.fonts.RobotoTextView
+
+            android:id="@+id/dialog_social_ok"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_dialog_warning"
+            android:gravity="center"
+            android:minWidth="64dp"
+            android:padding="8dp"
+            android:text="@string/cancel"
+            android:textColor="@color/primary_text"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:typeface="robotoMedium" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

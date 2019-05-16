@@ -1,0 +1,5 @@
+<root>
+    <item name='android.app.Activity void overridePendingTransition(int, int)'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

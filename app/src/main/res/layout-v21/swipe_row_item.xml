@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    swipe:leftEdgeSwipeOffset="0dp"
+    swipe:rightEdgeSwipeOffset="0dp">
+
+
+
+    <LinearLayout
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDelete"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@color/material_deep_orange_A700"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:weightSum="2"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/po_no"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/po_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="001"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/primary_text"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/parts_no"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/primary_text"/>
+                <TextView
+                    android:id="@+id/part_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="001"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/primary_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:weightSum="2"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/po_qty"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/po_qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/primary_text"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receive_qty"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/primary_text"/>
+                <TextView
+                    android:id="@+id/receive_qty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="88"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/primary_text"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+</com.daimajia.swipe.SwipeLayout>
+

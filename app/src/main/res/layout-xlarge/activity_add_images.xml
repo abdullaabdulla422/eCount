@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="15dp"
+    android:layout_height="wrap_content" >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <ImageView
+        android:id="@+id/img_camera"
+        android:layout_margin="15dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:visibility="visible"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="19dp"
+        android:layout_gravity="top|right"
+        android:src="@drawable/delete"
+        tools:ignore="ContentDescription">
+    </ImageView>
+
+    </FrameLayout>
+
+</LinearLayout>

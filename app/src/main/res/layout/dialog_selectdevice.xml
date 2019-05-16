@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_box">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:background="@color/material_blue_800_new"
+                    >
+
+                    <TextView
+                        android:id="@+id/txt_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:text="Select device"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/material_blue_800"
+
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/mx_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                       >
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/mxscanner"
+                            android:src="@drawable/scannernew"
+                            android:layout_weight="0.2"
+                            />
+
+
+                        <com.ebs.ecount.uidesigns.fonts.RobotoTextView
+
+                            android:id="@+id/dialog_mx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/mxscanner"
+                            android:textColor="@color/primary_text"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:layout_weight="0.8"
+                            android:textSize="14dp"
+                            app:typeface="robotoMedium" />
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="@color/material_blue_800"
+
+                        ></View>
+                    <LinearLayout
+                        android:id="@+id/mobile_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        >
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/mobilescanner"
+                            android:src="@drawable/search"
+                            android:layout_weight="0.2"
+                            />
+
+                        <com.ebs.ecount.uidesigns.fonts.RobotoTextView
+                            android:id="@+id/dialog_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/mobilecam"
+                            android:textColor="@color/primary_text"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:layout_weight="0.8"
+                            android:textSize="14dp"
+                            app:typeface="robotoMedium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+</LinearLayout>
